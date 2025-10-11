@@ -99,7 +99,8 @@ Created two **lifecycle rules** to manage storage efficiently:
 
 ### Architecture Diagram
 
-![S3 Cross Region Replication Diagram](https://mermaid.ink/img/pako:eNp9ksFqwzAMhl8l5XUJBSAtnEnKCzJ5og6gHiLBWI5KzT1k0d3taZCgG9_efc4YYry4bJZyjPUV8Ul0YqznZ3KbbCVn6uNjftCxB6lXhY0tT_0CHDT_x3RjTfUtnoBg5snPmg_QpTGpDVVxUaiD2CDdQCdN20RtG59uPDVTPYaMfC7Pbc5VjWGb3BrK2wDSx77jW3LVL-5hP0p2_1LUZ-Q_f5hXr)
+![Architecture Diagram](Architecture_Diagram.png) 
+
 
 #### Architecture Best Practices
 
