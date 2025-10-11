@@ -1,6 +1,6 @@
 ## Challenge Lab Creating-a-Static-Website-for-a-Cafe:AWS S3 Static Website Hosting
 
-### 🧭 Table of Contents
+### Table of Contents
 1. [Overview](#overview)
 2. [Objectives](#objectives)
 3. [Process](#️process)
