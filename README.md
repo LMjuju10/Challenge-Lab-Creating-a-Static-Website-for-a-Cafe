@@ -45,56 +45,20 @@ Uploaded:
 Tested access via the **S3 static website endpoint**.
 
 #### 3. Set Public Access Permissions
-Configured the following **bucket policy** for public read access:
+Configured bucket policy for public read access
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "PublicReadGetObject",
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::ellekay/*"
-    }
-  ]
-}
-```
 #### 4. Enable Versioning
 Enabled **Versioning** to track and preserve previous versions of all files.
-
 Tested by modifying `index.html` and re-uploading  both versions remained accessible.
 
 #### 5. Implement Lifecycle Rules
-Created two **lifecycle rules** to manage storage efficiently:
-
-- Move **noncurrent versions** to **S3 Standard-IA** after 30 days.  
-- Delete **noncurrent versions** after 365 days.
+Created two **lifecycle rules** to manage storage efficiently
 
 #### 6. Configure Cross-Region Replication (CRR)
 - Created a **destination bucket** in **US West (Oregon)** (`us-west-2`).  
 - Enabled **versioning** on both source and destination buckets.  
-- Set up replication using the **CafeRole** IAM Role with the following permissions:
+- Set up replication using the **CafeRole** IAM Role
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:ListBucket",
-        "s3:Get*",
-        "s3:ReplicateObject",
-        "s3:ReplicateDelete",
-        "s3:ReplicateTags"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-```
 ---
 
 ### Architecture Diagram
